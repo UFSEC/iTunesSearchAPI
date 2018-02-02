@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>iTunes Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap Style CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- JQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap Script CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Custon Script -->
+  <script src="script.js"></script>
+</head>
+<body>
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+
+    <!-- Header -->
+    <div class="col-lg-6">
+      <h1>iTunes Search</h1>
+      <p>Use the search box below to search the iTunes store..</p>
+    </div>
+  </div>
+
+  <!-- Search Bar  -->
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+           <input id="search-input" type="text" class="form-control" placeholder="Search for...">
+           <span class="input-group-btn">
+             <button id="search-btn" class="btn btn-default" type="button" onclick="onSearchBtnClicked()" >Go!</button>
+           </span>
+         </div>
+    </div>
+  </div>
+
+  <!-- Search Results -->
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Search Results</div>
+
+        <!-- Table -->
+        <table id="search-results-table" class="table">
+          <tr>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Track</th>
+            <th>Genre</th>
+            <th>Duration</th>
+            <th>Link</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
