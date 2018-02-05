@@ -4,7 +4,7 @@ function httpGetAsync(theUrl, callback)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
+            callback(xmlHttp.responseText)
     }
     xmlHttp.open("GET", theUrl, true) // True for async
     xmlHttp.send(null); // null body in the request (our query params are in the url)
@@ -43,7 +43,7 @@ function buildTableFromResults(results){
 // This function is called when the search button is clicked.
 function onSearchBtnClicked(){
   // Clear the Table
-  $("#search-results-table").find("tr:gt(0)").remove();
+  $("#search-results-table").find("tr:gt(0)").remove()
 
   var itunesBaseUrl = "https://itunes.apple.com/search"
 
@@ -60,6 +60,12 @@ function onSearchBtnClicked(){
   })
 }
 
+$(document).ready(function() {
+    $("#search-btn").click(function(){
+        onSearchBtnClicked()
+    })
+})
+
 // Moving forward
 // There is a lot more data coming back than what were are showing. Try logging the response to see what
 // that data looks that. Include other data you find interesting into the table yourself.
@@ -70,7 +76,7 @@ function onSearchBtnClicked(){
 // We are also only handling an http status code of 200 (i.e. everything has gone right). In the real world you
 // will want to handle errors as well. Look into http status codes and see if you can't figure out how you would
 // handle an error if one were to occur.
-// 
+//
 // This is just scratching the surface. If you can do this, you can interact with the TONS of other web APIs out there.
 // Reddits API is super simple like this one. If you want to try to get just a litttttle more advanced, look into working
 // with an API that requires authentication (like Twitter or Facebook)
